@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <!-- this is header one -->
+    <div class="header">
+       <div > <img style="height: 100px; border-radius: 50%; " src="images/2025-04-16.webp" alt=""></div>
+      <!--  <div class="name-container"><h2 class="name"><span>Habesha</span> Dental Clinic</h2></div> -->
+        <div class="header-contact">
+            <h4>+251 930 802 322</h4>
+            <button class="appointment-button" onclick="window.location.href='appointment.html'">Book Appointment <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+ <!-- this is navigation -->
+  <nav>
+    <div class="logo"><h1 class="logo"> <span>BrightSmile</span>  Dental Clinic</h1></div>
+    <ul id="lists">
+        <li  ><a href="#">Home</a></li>
+
+        <li ><a href="#">About Us</a></li>
+        <li ><a href="#">Services</a></li>
+        <li><a href="appointment.html">Contact</a></li>
+    </ul>
+    <div class="menu-icon" >
+        <i class="fa-solid fa-bars"  onclick="toogleMenu()"></i>
+    </div>
+</nav>
+ 
+<!--front page-->
+
+<section id="front-page">
+  <div class="container">
+
+  <!--image container-->
+        <div class="img-container">
+            <img src="images/front-image.jpg" class="active" alt="Smile 1">
+            
+        </div>
+  <!--why us section-->
+
+        <div class="disc-container">
+          <span><h1 class="disc-title">Why Choose Us</h1> </span>
+          <h4>
+            At BrightSmile, we’re dedicated to making your dental experience comfortable,
+             personalized, and stress-free. Our team combines years of expertise with the latest technology 
+             to ensure every visit leaves you smiling with confidence. From gentle care to transparent communication,
+              we treat every patient like family because your smile deserves the best.
+          </h4>
+
+
+              <div class="why-us-container">
+            <div class="why-us">
+              <h3>Experienced Dentists</h3>
+              <i class="fa-solid fa-user-doctor"></i>
+              
+               <p>Our dentists bring years of clinical experience and continuous training to every appointment. We’ve helped thousands of patients restore and maintain their smiles through gentle, precise, and effective care. 
+                Whether it’s a routine checkup or a complex treatment, your smile is in expert hands that truly care.</p>
+            </div>
+    
+            <div class="why-us">
+              <h3>Modern Technology</h3>
+              <i class="fa-solid fa-tooth"></i>
+              
+              <p>We believe great results come from the perfect balance of skill and technology. That’s why we use advanced digital X-rays, painless laser tools, and 3D imaging systems to diagnose and treat with unmatched accuracy. 
+                Our modern approach ensures faster treatments, quicker recovery, and a more comfortable experience from start to finish.</p>
+            </div>
+    
+            <div class="why-us">
+              <h3>Patient Comfort</h3>
+              <i class="fa-solid fa-heart"></i>
+              
+                <p>We know dental visits can cause anxiety — so we’ve designed our clinic to feel calm, friendly, and welcoming. From the cozy waiting area to soothing background music and gentle care techniques, every detail is focused on your relaxation. 
+                  Your comfort is our promise, because a happy patient makes a healthy smile.</p>
+            </div>
+               </div>
+      </div>
+
+        </div>
+ </section>
+
+         <!--Services
+         <div class="sevice-container">
+            <div class="services">
+                <i class="fa-solid fa-tooth"></i>
+            </div>
+            <div class="services">
+                <i class="fa-solid fa-teeth"></i>
+            </div>
+            <div class="services">
+                <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <div class="services">
+                <i class="fa-solid fa-teeth-open"></i>
+            </div>
+        </div>
+    </div>  -->
+
+        <div class="service-discription">
+          <h1 class="service-title">🦷 Our Services</h1>
+           <p class="service-disc">At BrightSmile Dental, we offer a full range of personalized dental treatments 
+            designed to keep your smile healthy, radiant, and confident. Whether you're here for routine care 
+            or a complete smile makeover, our expert team is committed to delivering gentle, high-quality service 
+            you can trust.</p>
+        </div>   
+         <div class="service-container">
+
+        <a href="services.html" class="services">
+          <img src="images/teeth-cleaning.png" alt="Teeth Cleaning">
+          <h3>Teeth Cleaning</h3>
+          <p>Professional cleaning to keep your smile fresh, bright, and healthy year-round.</p>
+        </a>
+      
+        <a href="services.html" class="services">
+          <img src="images/teeth-whitning.jpg" alt="Teeth Whitening">
+          <h3>Teeth Whitening</h3>
+          <p>Whiten your teeth safely and effectively with our in-office or take-home treatments.</p>
+        </a>
+      
+        <a href="services.html" class="services">
+          <img src="images/braces.jpg" alt="Braces & Aligners">
+          <h3>Braces & Aligners</h3>
+          <p>Straighten your teeth discreetly with modern orthodontic options including Invisalign.</p>
+        </a>
+      
+        <a href="services.html" class="services">
+          <img src="images/dental-implants.jpg" alt="Dental Implants">
+          <h3>Dental Implants</h3>
+          <p>Permanent tooth replacement solutions that look and feel like your natural teeth.</p>
+        </a>
+      
+      </div>
+
+        <!--our team-->
+      <div class="team-section">
+        <div class="team-text">
+          <h2>Meet Our Expert Dental Team</h2>
+          <p>Our highly trained and compassionate dental professionals are dedicated to making your experience comfortable and your smile beautiful. From preventive care to complex procedures, we're here to support your oral health journey every step of the way.</p>
+          <button class="appointment-button" onclick="window.location.href='appointment.html'">Book Appointment <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      
+        <div class="team-image">
+          <img src="images/dental-team.jpeg" alt="Our Dental Team">
+        </div>
+      </div>
+
+
+   <!-- Contact section-->
+      <div class="contact-section">
+        <h2>Contact Us</h2>
+      
+        <div class="contact-container">
+      
+          <!-- Contact Info -->
+          <div class="contact-box">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-user"></i> BrightSmile Dental Clinic</p>
+            <p><i class="fas fa-phone"></i> +1 234 567 8901</p>
+            <p><i class="fas fa-envelope"></i> contact@brightsmiledental.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Smile Ave, Tooth City, CA</p>
+          </div>
+      
+          <!-- Social Media Links -->
+          <div class="contact-box">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+          </div>
+      
+        </div>
+      </div>
+
+       <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15762.329223221575!2d38.7189226554199!3d9.010526000000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85d80eed451b%3A0x51ead2150972aa08!2sChurch%20of%20the%20Nativity%20of%20St.%20Mary%20-%20Lideta%20Mariam!5e0!3m2!1sen!2set!4v1748708152759!5m2!1sen!2set" 
+      id="map" width="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+<!-- Footer -->
+       <footer>
+        <div class="footer-container">
+          <!-- Clinic Info -->
+          <div class="footer-column">
+            <h3>BrightSmile Dental</h3>
+            <p>Creating confident, healthy smiles with gentle, expert care. We’re proud to be your trusted neighborhood dental clinic.</p>
+          </div>
+      
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+            <a href="#about"><i class="fas fa-chevron-right"></i> About Us</a>
+            <a href="#services"><i class="fas fa-chevron-right"></i> Services</a>
+            <a href="#team"><i class="fas fa-chevron-right"></i> Our Team</a>
+            <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
+          </div>
+      
+          <!-- Opening Hours -->
+          <div class="footer-column">
+            <h3>Opening Hours</h3>
+            <p>Mon – Fri: 8:00 AM – 6:00 PM</p>
+            <p>Saturday: 9:00 AM – 1:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+      
+          <!-- Contact Info & Social -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-phone"></i> +1 234 567 8901</p>
+            <p><i class="fas fa-envelope"></i> info@brightsmile.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Smile Ave, Tooth City, CA</p>
+          
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          &copy; 2025 BrightSmile Dental Clinic. All rights reserved.
+        </div>
+      </footer>
+      
+ <!-- Script for Back to Top -->
+<script>
+  const btn = document.getElementById('backToTop');
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btn.style.display = 'flex';
+    } else {
+      btn.style.display = 'none';
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<!--sliding animation script-->
+<!--<script>
+    const images = document.querySelectorAll('.img-container img');
+    let current = 0;
+  
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+    }, 100000); 
+  </script> -->
+<script src="https://kit.fontawesome.com/6a660dbe9a.js" crossorigin="anonymous"></script>
+<!--toogling animation-->
+<script>
+   let  lists= document.getElementById("lists")
+   lists.style.maxHeight= "0px"
+    
+
+    function toogleMenu(){
+        if(lists.style.maxHeight == "0px" ){
+           lists.style.maxHeight= "300px"
+        }
+        else{
+            lists.style.maxHeight ="0px"
+        }
+
+        let menuItems = lists.querySelectorAll("li");
+        menuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            lists.style.maxHeight = "0px";
+        });
+    });
+    }
+  
+</script>
+</body>
+</html>

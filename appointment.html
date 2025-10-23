@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Dr. Alia Diagnostic Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style> 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    height: 70px;
+}
+.header h2{
+    color: rgb(37, 86, 105);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 1000;
+    font-size: 1.6rem;
+}
+
+.header-contact{
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  align-items: center;
+}
+.header span{
+    color: hsl(34, 57%, 50%);
+}
+.header-contact h4{
+    font-size: 1.3rem;
+    color: rgb(37, 86, 105);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media (max-width: 800px) {
+    .header-contact h4{
+        display: none;
+    }
+}
+.appointment-button{
+    cursor: pointer;
+    font-size: 1.03rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px 23px;
+    background: #004274;
+    color: #fff;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition:  ease-in 0.3s;
+}
+.appointment-button:hover{
+    background: #fff;
+    color: #004274;
+}
+.appointment-button i{
+    padding-left: 5px;
+}
+/* --this is navigation --*/
+nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background: #004274;
+    height: 70px;
+    margin: 0;
+    font-family:  sans-serif;
+    z-index: 1;
+}
+.logo{
+    color: #fff;
+}
+.logo span{
+  color: hsl(34, 57%, 50%);
+}
+nav ul{
+    display: flex;
+   
+    list-style: none;
+    
+}
+nav ul li a{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    gap: 0;
+    text-align: center;
+    transition: all 0.5s;
+}
+nav ul li a:hover{
+    background:  hsla(206, 100%, 31%, 0.753);;
+    padding: 10px 20px;
+   
+}
+.menu-icon{
+    display: none;
+}
+
+.menu-icon i{
+    color: #fff;
+    font-size: 25px;
+
+}
+
+
+@media  (max-width : 658px) {
+    .header{
+        padding: 5px 15px;
+    }
+    .header h2{
+        font-size: 18px;
+    }
+    .header-contact h4{
+        display: none;
+    }
+   
+    nav ul {
+        z-index: 1;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #004274;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    #lists{
+        transition: all 0.5s;
+    }
+    .logo{
+      font-size: 24px;
+    }
+      
+}
+        
+        /* Appointment Section Styles */
+        .appointment-section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .appointment-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2a7a9c;
+            font-size: 2.5rem;
+        }
+        
+        .appointment-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .appointment-form {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+        }
+        
+        .appointment-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: #2a7a9c;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #2a7a9c;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(42, 122, 156, 0.2);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #2a7a9c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1e5d7a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .info-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ffd166;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .info-item i {
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 5px;
+            color: #ffd166;
+        }
+        
+        .info-text h4 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .hours-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Confirmation Message */
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        
+        .confirmation-message i {
+            font-size: 4rem;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+        
+        .confirmation-message h2 {
+            color: #2a7a9c;
+            margin-bottom: 15px;
+        }
+        
+        
+    </style>
+       
+
+</head>
+<body>
+     <!-- this is header one -->
+     <div class="header">
+        <div class="name-container"><h2 class="name"><span>Habesha</span> Dental Clinic</h2></div>
+        <div class="header-contact">
+            <h4>+251 686539870</h4>
+            <button class="appointment-button">Book Appointment <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+ <!-- this is navigation -->
+  <nav>
+    <div class="logo"><h1 class="logo">🦷 Habesha</h1></div>
+    <ul id="lists">
+        <li  ><a href="header.html">Home</a></li>
+        <li ><a href="#">About Us</a></li>
+        <li ><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="menu-icon" >
+        <i class="fa-solid fa-bars"  onclick="toogleMenu()"></i>
+    </div>
+</nav>
+
+     <!-- Appointment Section -->
+     <section class="appointment-section">
+        <h1 class="appointment-title">Book Your Appointment</h1>
+        
+        <div class="appointment-container">
+            <!-- Appointment Form -->
+            <div class="appointment-form">
+                <form id="appointmentForm" name="submit-to-google-sheet">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" name="service" required>
+                            <option value="">Choose a service</option>
+                            <option value="teeth-cleaning">Teeth Cleaning</option>
+                            <option value="teeth-whitening">Teeth Whitening</option>
+                            <option value="braces-aligners">Braces & Aligners</option>
+                            <option value="dental-implants">Dental Implants</option>
+                            <option value="checkup">General Checkup</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <select id="time" name="time" required>
+                            <option value="">Select a time</option>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="15:00">03:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Message (Optional)</label>
+                        <textarea id="message" name="message" placeholder="Any specific concerns or requests..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Book Appointment</button>
+                </form>
+            </div>
+            
+            <!-- Appointment Information -->
+            <div class="appointment-info">
+                <h2 class="info-title">Why Book With Us?</h2>
+                
+                <div class="info-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="info-text">
+                        <h4>Easy Scheduling</h4>
+                        <p>Book your appointment online in just a few clicks. We'll confirm your booking within 24 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="info-text">
+                        <h4>Flexible Hours</h4>
+                        <p>We offer convenient appointment times to fit your busy schedule.</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-user-md"></i>
+                    <div class="info-text">
+                        <h4>Expert Care</h4>
+                        <p>Our experienced dental professionals provide personalized treatment for all your dental needs.</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info-text">
+                        <h4>Clinic Hours</h4>
+                        <ul class="hours-list">
+                            <li><span>Monday - Friday:</span> <span>8:00 AM - 6:00 PM</span></li>
+                            <li><span>Saturday:</span> <span>9:00 AM - 1:00 PM</span></li>
+                            <li><span>Sunday:</span> <span>Closed</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Confirmation Message (Hidden by default) -->
+        <div class="confirmation-message" id="confirmationMessage">
+            <i class="fas fa-check-circle"></i>
+            <h2>Appointment Request Submitted!</h2>
+            <p>Thank you for booking with us. We have received your appointment request and will contact you shortly to confirm your visit.</p>
+            <p>If you have any urgent questions, please call us at <strong>+251 930 802 322</strong>.</p>
+        </div>
+    </section>
+
+    <script>
+        // Form submission handling
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send the form data to a server here
+            // For demonstration, we'll just show the confirmation message
+            
+            // Hide the form and show confirmation
+            document.querySelector('.appointment-container').style.display = 'none';
+            document.getElementById('confirmationMessage').style.display = 'block';
+            
+            // Scroll to confirmation message
+            document.getElementById('confirmationMessage').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+        
+
+   
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbydMQCPtlkOgY0hxjv7PQklmVZKr7njCUHLWrvoKW1RNDtqhOcGFsRVdw-CMdc7B-nuwQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+ 
+<script>
+            // Navigation menu toggle
+
+            let  lists= document.getElementById("lists")
+    lists.style.maxHeight= "0px"
+     
+ 
+     function toogleMenu(){
+         if(lists.style.maxHeight == "0px" ){
+            lists.style.maxHeight= "300px"
+         }
+         else{
+             lists.style.maxHeight ="0px"
+         }
+ 
+         let menuItems = lists.querySelectorAll("li");
+         menuItems.forEach((item) => {
+         item.addEventListener("click", () => {
+             lists.style.maxHeight = "0px";
+         });
+     });
+     }
+</script>
+</html>
